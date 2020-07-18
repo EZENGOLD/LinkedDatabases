@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('', 'PerfectmoneyController@ask_balance')->name('perfect.balance.request');
+Route::post('balance', 'PerfectmoneyController@show_balance')->name('perfect.balance.show');
